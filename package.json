@@ -2,7 +2,7 @@
   "name": "canvass-coord-api",
   "version": "1.0.0",
   "description": "API Service for CanvassCoord",
-  "main": "app.js",
+  "main": "server/app.js",
   "scripts": {
     "test": "mocha"
   },
