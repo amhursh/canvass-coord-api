@@ -4,7 +4,7 @@
   "description": "API Service for CanvassCoord",
   "main": "server/app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,8 @@
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
     "mocha": "^4.0.1",
-    "nodemon": "^1.14.1"
+    "nodemon": "^1.14.1",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "knex": "^0.14.2",
