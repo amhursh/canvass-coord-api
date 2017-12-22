@@ -25,10 +25,10 @@ describe('routes: targets', () => {
     db.raw(
       `INSERT INTO targets 
       (
-        firstName, 
-        lastName, 
-        streetNumber, 
-        streetName, 
+        first_name, 
+        last_name, 
+        street_number, 
+        street_name, 
         unit, 
         city, 
         state, 
@@ -77,10 +77,10 @@ describe('routes: targets', () => {
         .expect(200, [
           { 
             "id": "1",
-            "firstName": "Aaron",
-            "lastName": "James",
-            "streetNumber": "25",
-            "streetName": "Foxface Circle",
+            "first_name": "Aaron",
+            "last_name": "James",
+            "street_number": "25",
+            "street_name": "Foxface Circle",
             "unit": null,
             "city": "Englewood",
             "state": "CO",
@@ -89,10 +89,10 @@ describe('routes: targets', () => {
           },
           {
             "id": "2",
-            "firstName": "Sara",
-            "lastName": "Smith",
-            "streetNumber": "2131",
-            "streetName": "Lawrence Street",
+            "first_name": "Sara",
+            "last_name": "Smith",
+            "street_number": "2131",
+            "street_name": "Lawrence Street",
             "unit": "123",
             "city": "Denver",
             "state": "CO",
