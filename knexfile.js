@@ -3,7 +3,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection:'postgres://localhost/canvass-coord-api',
+    connection:'postgres://localhost/canvass_coord_api',
     migrations: {
       directory: './db/migrations'
     },
@@ -15,7 +15,7 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection:'postgres://localhost/canvass-coord-api_test',
+    connection:'postgres://localhost/canvass_coord_api_test',
     migrations: {
       directory: './db/migrations'
     },
