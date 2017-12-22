@@ -3,24 +3,24 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection:'postgres://localhost/canvass-coord-api',
+    connection:'postgres://localhost/canvass_coord_api',
     migrations: {
-      directory: './db/migrations'
+      directory: './server/db/migrations'
     },
     seeds: {
-      directory: './db/seeds/dev'
+      directory: './server/db/seeds/dev'
     },
     useNullAsDefault: true
   },
 
   test: {
     client: 'pg',
-    connection:'postgres://localhost/canvass-coord-api_test',
+    connection:'postgres://localhost/canvass_coord_api_test',
     migrations: {
-      directory: './db/migrations'
+      directory: './server/db/migrations'
     },
     seeds: {
-      directory: './db/seeds/test'
+      directory: './server/db/seeds/test'
     },
     useNullAsDefault: true
   },
@@ -29,10 +29,10 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
-      directory: './db/migrations'
+      directory: './server/db/migrations'
     },
     seeds: {
-      directory: './db/seeds/production'
+      directory: './server/db/seeds/production'
     },
     useNullAsDefault: true
   }
