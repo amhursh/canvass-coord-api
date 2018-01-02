@@ -9,6 +9,7 @@ const all = () => {
 const addCamp = (ti, descrip) => {
   return db('campaigns')
     .insert({title: ti, description: descrip, created_at: new Date, updated_at: new Date})
+    .returning('*')
 }
 
 module.exports = {

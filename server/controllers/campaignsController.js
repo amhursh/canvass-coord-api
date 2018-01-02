@@ -19,9 +19,16 @@ const create = async ctx => {
   let title = ctx.request.body.campaign.title
   let description = ctx.request.body.campaign.description
   // eval(pry.it)
+  if(!title || !description)
+    return ctx.response.status = 404
+
   let campaigns = await Campaigns.addCamp(title, description)
 
-  eval(pry.it)
+  ctx.response.status = 201
+  ctx.body = {
+    status: 'success',
+    data: campaigns
+  }
 }
 
 module.exports = {
