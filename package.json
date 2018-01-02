@@ -4,7 +4,8 @@
   "description": "API Service for CanvassCoord",
   "main": "server/app.js",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
     "mocha": "^4.0.1",
-    "nodemon": "^1.14.1",
+    "nodemon": "^1.14.7",
     "pryjs": "^1.0.3",
     "supertest": "^3.0.0"
   },
