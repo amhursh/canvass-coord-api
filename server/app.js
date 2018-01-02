@@ -1,10 +1,14 @@
 const Koa = require('koa')
+const bodyParser = require('koa-bodyparser')
+
 const rootRoute = require('./routes/root.routes')
 const targetsRoutes = require('./routes/targets.routes')
 const campaignsRoutes = require('./routes/campaigns.routes')
 
 const app = new Koa()
 const PORT = process.env.PORT || 8081
+
+app.use(bodyParser())
 
 app.use(rootRoute.routes())
 app.use(targetsRoutes.routes())
