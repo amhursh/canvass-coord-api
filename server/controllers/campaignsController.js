@@ -18,16 +18,19 @@ const index = async ctx => {
 const create = async ctx => {
   let title = ctx.request.body.campaign.title
   let description = ctx.request.body.campaign.description
-  // eval(pry.it)
-  if(!title || !description)
-    return ctx.response.status = 404
-
-  let campaigns = await Campaigns.addCamp(title, description)
-
-  ctx.response.status = 201
-  ctx.body = {
-    status: 'success',
-    data: campaigns
+  try {
+    let campaign = await Campaigns.addCamp(title, description)
+    if(campaign.length) {
+      ctx.response.status = 201
+      ctx.body = {
+        status: 'success',
+        data: campaign
+      }
+    } else {
+      ctx.status = 404
+    }
+  } catch (err) {
+    console.log(err)
   }
 }
 
