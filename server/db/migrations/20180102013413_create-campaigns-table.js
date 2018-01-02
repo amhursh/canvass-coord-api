@@ -3,6 +3,8 @@ exports.up = function(knex, Promise) {
       table.increments('id').primary()
       table.string('title')
       table.string('description')
+      table.dateTime('created_at')
+      table.dateTime('updated_at')
     })
 };
 
