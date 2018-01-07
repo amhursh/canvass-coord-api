@@ -6,7 +6,7 @@ const targetsRoutes = require('./routes/targets.routes')
 const campaignsRoutes = require('./routes/campaigns.routes')
 
 const app = new Koa()
-const PORT = process.env.PORT || 8081
+const PORT = process.env.PORT || 8080
 
 app.use(bodyParser())
 
