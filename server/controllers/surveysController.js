@@ -1,4 +1,5 @@
-Surveys = require('../models/survey')
+const Surveys = require('../models/survey')
+const Questions = require('../models/question')
 
 pry = require('pryjs')
 
@@ -12,6 +13,17 @@ const index = async ctx => {
   ctx.body = surveys
 }
 
+const questions = async ctx => {
+  let surveyId = ctx.params.id
+  let questions = await Questions.bySurvey(surveyId)
+
+  if (!questions[0])
+    return ctx.response.status = 404
+
+  ctx.body = questions
+}
+
 module.exports = {
-  index
+  index,
+  questions
 }
