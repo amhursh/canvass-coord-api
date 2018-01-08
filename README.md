@@ -1,4 +1,4 @@
-# Quantified Api
+# CanvassCoord Api
 
 ## Introduction
 
