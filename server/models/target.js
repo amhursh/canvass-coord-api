@@ -7,6 +7,11 @@ const all = () => {
   // return db.raw('SELECT * FROM targets')
 }
 
+const byCampaign = (campaignId) => {
+  return db.select().table('targets').where('campaign_id', campaignId)
+}
+
 module.exports = {
-  all
+  all,
+  byCampaign
 }
