@@ -1,8 +1,6 @@
 const Surveys = require('../models/survey')
 const Questions = require('../models/question')
 
-pry = require('pryjs')
-
 const index = async ctx => {
   let campaignId = ctx.query.campaign
   let surveys = await Surveys.byCampaign(campaignId)

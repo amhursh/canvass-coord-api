@@ -1,7 +1,5 @@
 const Answers = require('../models/answer')
 
-const pry = require('pryjs')
-
 const create = async ctx => {
   const answerVal = ctx.request.body.answer
   const questionId = ctx.request.body.questionId

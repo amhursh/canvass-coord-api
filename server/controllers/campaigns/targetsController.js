@@ -1,5 +1,3 @@
-let pry = require('pryjs')
-
 const Targets = require('../../models/target')
 
 const index = async ctx => {
