@@ -3,7 +3,6 @@ const Answers = require('../models/answer')
 const pry = require('pryjs')
 
 const create = async ctx => {
-  eval(pry.it)
   const answerVal = ctx.request.body.answer
   const questionId = ctx.request.body.questionId
   const targetId = ctx.request.body.targetId

@@ -7,3 +7,7 @@ const addAnswer = (answer, questionId, targetId) => {
     .insert({body: answer, question_id: questionId, target_id: targetId})
     .returning('*')
 }
+
+module.exports = {
+  addAnswer
+}
