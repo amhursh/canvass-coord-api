@@ -17,5 +17,6 @@ const allByTargetAndQuestion = (targetId, questionId) => {
 }
 
 module.exports = {
-  addAnswer
+  addAnswer,
+  allByTargetAndQuestion
 }
