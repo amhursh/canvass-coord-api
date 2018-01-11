@@ -8,6 +8,15 @@ const addAnswer = (answer, questionId, targetId) => {
     .returning('*')
 }
 
+const allByTargetAndQuestion = (targetId, questionId) => {
+  return db('answers')
+    .where({
+      target_id: targetId,
+      question_id: questionId
+    })
+}
+
 module.exports = {
-  addAnswer
+  addAnswer,
+  allByTargetAndQuestion
 }

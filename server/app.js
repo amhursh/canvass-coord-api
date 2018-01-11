@@ -7,6 +7,7 @@ const campaignsRoutes = require('./routes/campaigns.routes')
 const surveysRoutes = require('./routes/surveys.routes')
 const campaignTargetsRoutes = require('./routes/campaigns/targets.routes')
 const answersRoutes = require('./routes/answers.routes')
+const targetAnswersRoutes = require('./routes/targets/answers.routes')
 
 const app = new Koa()
 const PORT = process.env.PORT || 8080
@@ -19,6 +20,7 @@ app.use(campaignsRoutes.routes())
 app.use(surveysRoutes.routes())
 app.use(campaignTargetsRoutes.routes())
 app.use(answersRoutes.routes())
+app.use(targetAnswersRoutes.routes())
 
 if(!module.parent)
   app.listen(PORT).on('error', err => {
